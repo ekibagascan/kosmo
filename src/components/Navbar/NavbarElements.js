@@ -1,45 +1,39 @@
-import styled from 'styled-components';
-import { NavLink as Link } from 'react-router-dom';
-import { FaPizzaSlice } from 'react-icons/fa';
+import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const Nav = styled.nav`
-  background: transparent;
+  background: #000;
   height: 80px;
   display: flex;
   justify-content: center;
-  font-weight: 700;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
 `;
 
-export const NavLink = styled(Link)`
+export const NavbarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1100px;
+`;
+export const NavLogo = styled(LinkR)`
   color: #fff;
-  font-size: 2rem;
+  justify-self: flex-start;
+  cursor: pointer;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
+  margin-left: 24px;
+  font-weight: bold;
   text-decoration: none;
-  cursor: pointer;
-
-  @media screen and (max-width: 400px) {
-    position: absolute;
-    top: 10px;
-    left: 25px;
-  }
-`;
-
-export const NavIcon = styled.div`
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  color: #fff;
-
-  p {
-    transform: translate(-175%, 100%);
-    font-weight: bold;
-  }
-`;
-
-export const Bars = styled(FaPizzaSlice)`
-  font-size: 2rem;
-  transform: translate(-50%, -15%);
 `;

@@ -1,17 +1,17 @@
-import React from 'react';
-import { Nav, NavLink, NavIcon, Bars } from './NavbarElements';
+import React from "react";
 
-const Navbar = ({ toggle }) => {
+import { Nav, NavbarContainer, NavLogo } from "./NavbarElements";
+import logo from "../../images/navbarlogo.png";
+
+const Navbar = () => {
   return (
-    <>
-      <Nav>
-        <NavLink to='/'>Pizza</NavLink>
-        <NavIcon onClick={toggle}>
-          <p>Menu</p>
-          <Bars />
-        </NavIcon>
-      </Nav>
-    </>
+    <Nav>
+      <NavbarContainer>
+        <NavLogo to="/">
+          <img src={logo} alt="logo" />
+        </NavLogo>
+      </NavbarContainer>
+    </Nav>
   );
 };
 

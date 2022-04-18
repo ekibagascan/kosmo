@@ -1,21 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { GlobalStyle } from './globalStyles';
-import Hero from './components/Hero';
-import Products from './components/Products';
-import { productData, productDataTwo } from './components/Products/data';
-import Feature from './components/Feature';
-import Footer from './components/Footer';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import SectionOne from "./components/Section_1";
+import SectionTwo from "./components/Section_2";
+import SectionThree from "./components/Section_3";
+import SectionFour from "./components/Section_4";
+import "./index.css";
+
+// import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
-      <GlobalStyle />
-      <Hero />
-      <Products heading='Choose your favorite' data={productData} />
-      <Feature />
-      <Products heading='Sweet Treats for You' data={productDataTwo} />
-      <Footer />
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
+      {/* <Footer /> */}
     </Router>
   );
 }
